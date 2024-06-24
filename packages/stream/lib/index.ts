@@ -483,7 +483,7 @@ export class SerialPortStream<T extends BindingInterface = BindingInterface> ext
    * @param err
    * @param callback
    */
-  _destroy(err: Error | undefined, callback: ErrorCallback) {
+  _destroy(err: Error | null, callback: ErrorCallback) {
     debug('_destroy')
     if (this.port) {
       debug('_destroy', 'releasing port')
